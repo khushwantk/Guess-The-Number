@@ -1,6 +1,6 @@
 # Guess-The-Number
 
-Guess the randomly generated number with the help of your previous unputs.
+Guess the randomly generated number with the help of your previous inputs.
 
 Some Close: Difference>=5 and <10
 
