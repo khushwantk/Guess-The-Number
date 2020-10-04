@@ -1,149 +1,149 @@
-//  storing the list of guesses
-let guesses = [];
-//storing the correct random number
-let correctnumber = getRandomNumber();
-console.log(correctnumber);
-
-window.onload = function () {
-  document.getElementById("number-submit").addEventListener("click", playGame);
-  document.getElementById("restart-game").addEventListener("click", initGame);
+const _0x4dd2 = [
+    'history',
+    'getElementById',
+    'What\x27s\x20your\x20guess?',
+    'You\x20guessed\x20',
+    'Cool\x20Just\x20Got\x20some\x20closer!!!',
+    'number-guess',
+    '</div>',
+    'number-submit',
+    'innerHTML',
+    'result',
+    '<div\x20class=\x27alert\x20alert-warning\x27\x20role=\x27alert\x27>',
+    'click',
+    'won',
+    'Your\x20guess\x20is\x20too\x20low!',
+    '<ul\x20class=\x27list-group\x27>',
+    'log',
+    'value',
+    'restart-game',
+    'length',
+    'floor',
+    '</ul>',
+    'warning',
+    '<li\x20class=\x27list-group-item\x27>',
+    'push',
+    '<div\x20class=\x27alert\x20alert-success\x27\x20role=\x27alert\x27>',
+    'Cool\x20Just\x20Got\x20very\x20close!!',
+    'random',
+    'Awesome\x20job,\x20you\x20got\x20it!'
+];
+(function (_0xaea385, _0x4dd299) {
+    const _0x3cb1d3 = function (_0x2abe1a) {
+        while (--_0x2abe1a) {
+            _0xaea385['push'](_0xaea385['shift']());
+        }
+    };
+    _0x3cb1d3(++_0x4dd299);
+}(_0x4dd2, 0x114));
+const _0x3cb1 = function (_0xaea385, _0x4dd299) {
+    _0xaea385 = _0xaea385 - 0x0;
+    let _0x3cb1d3 = _0x4dd2[_0xaea385];
+    return _0x3cb1d3;
 };
-
-//  Functionality for playing the whole game
-
-function playGame() {
-  let numberGuess = document.getElementById("number-guess").value;
-  displayresult(numberGuess);
-  saveGuessHistory(numberGuess);
-  displayHistory();
+const _0x31131f = _0x3cb1;
+let _0x2abe1a = [];
+let _0x5be648 = _0x502c25();
+console[_0x31131f('0x13')](_0x5be648);
+window['onload'] = function () {
+    const _0x2dec22 = _0x31131f;
+    document['getElementById'](_0x2dec22('0xb'))['addEventListener'](_0x2dec22('0xf'), _0x5cbc84);
+    document[_0x2dec22('0x5')](_0x2dec22('0x15'))['addEventListener'](_0x2dec22('0xf'), _0x5030ba);
+};
+function _0x5cbc84() {
+    const _0x36e9e8 = _0x31131f;
+    let _0x4e6c8d = document[_0x36e9e8('0x5')](_0x36e9e8('0x9'))[_0x36e9e8('0x14')];
+    _0x4786de(_0x4e6c8d);
+    _0x272675(_0x4e6c8d);
+    _0x588c99();
 }
-
-//  Show the result for if the guess it too high, too low, or correct
-
-function displayresult(numberGuess) {
-  if (correctnumber - numberGuess >= 10) {
-    showNumberBelow();
-  } else if (correctnumber - numberGuess <= -10) {
-    showNumberAbove();
-  } else if (
-    correctnumber - numberGuess >= 5 &&
-    correctnumber - numberGuess < 10
-  ) {
-    showNumberSomeClose();
-  } else if (
-    correctnumber - numberGuess <= -5 &&
-    correctnumber - numberGuess > -10
-  ) {
-    showNumberSomeClose();
-  } else if (
-    correctnumber - numberGuess <= -1 &&
-    correctnumber - numberGuess > -5
-  ) {
-    showNumberVeryClose();
-  } else if (
-    correctnumber - numberGuess >= 1 &&
-    correctnumber - numberGuess < 5
-  ) {
-    showNumberVeryClose();
-  } else {
-    showYouWon();
-  }
+function _0x4786de(_0x31055a) {
+    if (_0x5be648 - _0x31055a >= 0xa) {
+        _0x5ad97c();
+    } else if (_0x5be648 - _0x31055a <= -0xa) {
+        _0x1dc45d();
+    } else if (_0x5be648 - _0x31055a >= 0x5 && _0x5be648 - _0x31055a < 0xa) {
+        _0x248f2d();
+    } else if (_0x5be648 - _0x31055a <= -0x5 && _0x5be648 - _0x31055a > -0xa) {
+        _0x248f2d();
+    } else if (_0x5be648 - _0x31055a <= -0x1 && _0x5be648 - _0x31055a > -0x5) {
+        _0x4f3688();
+    } else if (_0x5be648 - _0x31055a >= 0x1 && _0x5be648 - _0x31055a < 0x5) {
+        _0x4f3688();
+    } else {
+        _0xcb377e();
+    }
 }
-
-//  Initializing a new game by resetting all values
-
-function initGame() {
-  //Reset everything like correctNumber,result display,guesses array,reset the history view
-  correctnumber = getRandomNumber();
-  document.getElementById("result").innerHTML = " ";
-  guesses = [];
-  displayHistory(); //because guesses are empty now
-  document.getElementById("number-guess").innerHTML = "What's your guess?";
+function _0x5030ba() {
+    const _0x2cb06e = _0x31131f;
+    _0x5be648 = _0x502c25();
+    document[_0x2cb06e('0x5')](_0x2cb06e('0xd'))['innerHTML'] = '\x20';
+    _0x2abe1a = [];
+    _0x588c99();
+    document[_0x2cb06e('0x5')](_0x2cb06e('0x9'))[_0x2cb06e('0xc')] = _0x2cb06e('0x6');
 }
-
-//  Generating a random number between 1 and 100
-
-function getRandomNumber() {
-  let randomnumber = Math.floor(Math.random() * 100) + 1;
-
-  return randomnumber;
+function _0x502c25() {
+    const _0x397570 = _0x31131f;
+    let _0x2ff4f9 = Math[_0x397570('0x17')](Math[_0x397570('0x2')]() * 0x64) + 0x1;
+    return _0x2ff4f9;
 }
-
-//  Save guess history by appendding the gusses to a array
-
-function saveGuessHistory(guess) {
-  guesses.push(guess);
+function _0x272675(_0x164d02) {
+    const _0x16a196 = _0x31131f;
+    _0x2abe1a[_0x16a196('0x1b')](_0x164d02);
 }
-
-//  Displayint the guess history
-
-function displayHistory() {
-  let index = guesses.length - 1;
-  let list = "<ul class='list-group'>";
-
-  while (index >= 0) {
-    list +=
-      "<li class='list-group-item'>" +
-      "You guessed " +
-      guesses[index] +
-      "</li>";
-    index--;
-  }
-  list += "</ul>";
-
-  document.getElementById("history").innerHTML = list;
+function _0x588c99() {
+    const _0x1c86a5 = _0x31131f;
+    let _0x33a309 = _0x2abe1a[_0x1c86a5('0x16')] - 0x1;
+    let _0x1ee746 = _0x1c86a5('0x12');
+    while (_0x33a309 >= 0x0) {
+        _0x1ee746 += _0x1c86a5('0x1a') + _0x1c86a5('0x7') + _0x2abe1a[_0x33a309] + '</li>';
+        _0x33a309--;
+    }
+    _0x1ee746 += _0x1c86a5('0x18');
+    document[_0x1c86a5('0x5')](_0x1c86a5('0x4'))[_0x1c86a5('0xc')] = _0x1ee746;
 }
-
-//  Showing if the guess is wrong or correct
-
-function getDialog(dialogType, text) {
-  let dialog;
-  switch (dialogType) {
-    case "warning":
-      dialog = "<div class='alert alert-warning' role='alert'>";
-      break;
-    case "won":
-      dialog = "<div class='alert alert-success' role='alert'>";
-      break;
-  }
-  dialog += text;
-  dialog += "</div>";
-  return dialog;
+function _0x4a822a(_0x8c54e9, _0x5f29ca) {
+    const _0x265845 = _0x31131f;
+    let _0x28429a;
+    switch (_0x8c54e9) {
+    case _0x265845('0x19'):
+        _0x28429a = _0x265845('0xe');
+        break;
+    case _0x265845('0x10'):
+        _0x28429a = _0x265845('0x0');
+        break;
+    }
+    _0x28429a += _0x5f29ca;
+    _0x28429a += _0x265845('0xa');
+    return _0x28429a;
 }
-
-function showYouWon() {
-  const text = "Awesome job, you got it!";
-  //  Get the dialog using the getDialog() function and save it to variable called dialog to output it
-
-  let dialog = getDialog("won", text);
-
-  document.getElementById("result").innerHTML = dialog;
+function _0xcb377e() {
+    const _0xad9aa5 = _0x31131f;
+    const _0x48703c = _0xad9aa5('0x3');
+    let _0xf63416 = _0x4a822a('won', _0x48703c);
+    document[_0xad9aa5('0x5')](_0xad9aa5('0xd'))[_0xad9aa5('0xc')] = _0xf63416;
 }
-
-function showNumberAbove() {
-  const text = "Your guess is too high!";
-
-  let dialog = getDialog("warning", text);
-  document.getElementById("result").innerHTML = dialog;
+function _0x1dc45d() {
+    const _0x597b62 = _0x31131f;
+    const _0x3d7557 = 'Your\x20guess\x20is\x20too\x20high!';
+    let _0x2316e6 = _0x4a822a(_0x597b62('0x19'), _0x3d7557);
+    document[_0x597b62('0x5')](_0x597b62('0xd'))[_0x597b62('0xc')] = _0x2316e6;
 }
-
-function showNumberBelow() {
-  const text = "Your guess is too low!";
-
-  let dialog = getDialog("warning", text);
-  document.getElementById("result").innerHTML = dialog;
+function _0x5ad97c() {
+    const _0x301009 = _0x31131f;
+    const _0x11463c = _0x301009('0x11');
+    let _0x110d39 = _0x4a822a(_0x301009('0x19'), _0x11463c);
+    document[_0x301009('0x5')](_0x301009('0xd'))['innerHTML'] = _0x110d39;
 }
-
-function showNumberSomeClose() {
-  const text = "Cool Just Got some closer!!!";
-
-  let dialog = getDialog("warning", text);
-  document.getElementById("result").innerHTML = dialog;
+function _0x248f2d() {
+    const _0x51b20e = _0x31131f;
+    const _0x34953d = _0x51b20e('0x8');
+    let _0xf2722f = _0x4a822a(_0x51b20e('0x19'), _0x34953d);
+    document[_0x51b20e('0x5')](_0x51b20e('0xd'))['innerHTML'] = _0xf2722f;
 }
-
-function showNumberVeryClose() {
-  const text = "Cool Just Got very close!!";
-
-  let dialog = getDialog("warning", text);
-  document.getElementById("result").innerHTML = dialog;
+function _0x4f3688() {
+    const _0x3bc04e = _0x31131f;
+    const _0x35d522 = _0x3bc04e('0x1');
+    let _0xcbbd4b = _0x4a822a(_0x3bc04e('0x19'), _0x35d522);
+    document['getElementById'](_0x3bc04e('0xd'))[_0x3bc04e('0xc')] = _0xcbbd4b;
 }
