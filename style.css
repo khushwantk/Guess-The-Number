@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+#number-guess {
+    display: inline-block;
+}
+
 #history {
     margin-top: 16px;
 }
@@ -11,4 +15,45 @@
     color: #FFD23F;
     font-size: 90px;
     font-family: sans-serif;
+}
+
+.tool-tip {
+    position: relative;
+    display: inline-block;
+}
+
+.tool-tip .icon {
+    vertical-align: middle;
+    color: #999;
+}
+.tool-tip .icon:hover {
+    color: #666;
+}
+
+.tool-tip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #999;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+  }
+  
+/* .tool-tip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #999 transparent transparent;
+} */
+.tool-tip:hover .tooltiptext {
+    visibility: visible;
 }
